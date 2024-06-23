@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>P2P Media Loader</title>
+
+
+
+	<link rel="stylesheet" href="./1.css" type="text/css" />
+
+	<script type="text/javascript" src="./2.js"></script>
+
+
+</head>
+<body>
+
+<div id="content"> 
+
+<script>
+    const URL_P2P_MEDIA_LOADER_HLSJS = "https://cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js";
+    const URL_P2P_MEDIA_LOADER_SHAKA = "https://cdn.jsdelivr.net/npm/p2p-media-loader-shaka@latest/build/p2p-media-loader-shaka.min.js";
+</script>
+
+<div class="container">
+<!-- Begin demo copy-paste -->
+<div id="main-view">
+
+    <div class="wrapper">
+        <div class="column-1">
+            <div id="video_container"></div>
+        </div>
+        <div class="column-2">
+            <form id="videoUrlForm">
+                <div class="form-group">
+                    <label for="url">Video URL<span id="https-only" class="hide"> (HTTPS only)</span>:</label>
+                    <input type="text" class="form-control" id="url" name="url" placeholder="Please enter video url" required
+                        value="https://vtsstr6.tv24.vn/live/_definst_/smil:SCTVHDThieunhi.smil/chunklist.m3u8" />
+                </div>
+                <div class="form-group">
+                    <label for="type">Player:</label>
+                    <select class="form-control" id="type" name="type">
+                        <optgroup label="Hls.js P2P Engine (HLS only)">
+                            <option value="clappr" selected>Clappr</option>
+                            <option value="hlsjs">Hls.js</option>
+                            <option value="flowplayer">Flowplayer</option>
+                            <option value="mediaelement">MediaElement</option>
+                            <option value="videojs-contrib-hlsjs">VideoJs-Contrib-HlsJs</option>
+                            <option value="videojs-hlsjs-plugin">VideoJs-HlsJs-Plugin</option>
+                            <option value="jwplayer">JWPlayer</option>
+                            <option value="dplayer">DPlayer</option>
+                            <option value="plyr">Plyr</option>
+                        </optgroup>
+                        <optgroup label="Shaka P2P Engine (HLS and DASH)">
+                            <option value="shakaplayer">Shaka Player</option>
+                            <option value="clappr-shaka">Clappr (DASH only)</option>
+                            <option value="dplayer-shaka">DPlayer</option>
+                            <option value="plyr-shaka">Plyr</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <button type="submit" class="form-button" onclick="this.form.target=''">Apply</button>
+        <button type="submit" class="form-button" onclick="this.form.target='_blank'">Create new peer</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
+
